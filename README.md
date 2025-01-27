@@ -2,6 +2,9 @@
 
 ROS package for reading and publishing data from flex sensors connected to Arduino.
 
+Flex sensor response when gripping small cilinder (lighter grip):
+![Flex Sensor Setup](sensor_data/images/cilinder0.png)
+
 ## Hardware Requirements
 - Arduino board
 - Flex sensors
