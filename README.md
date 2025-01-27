@@ -54,7 +54,7 @@ Requirements:
 - Flex sensor
 
 Connect your Arduino board with flex sensor (Bendlabs 1-axis flex sensor) like on this schema:
-![Flex Sensor Setup](schema.png)
+![Flex Sensor Setup](shema.png)
 
 Also, plug Arduino into your laptop via USB cable. Open Arduino IDE and make a new sketch with the code provided in this git repo. Compile it and flash it to your Arduino.
 
