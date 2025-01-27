@@ -59,7 +59,7 @@ Connect your Arduino board with flex sensor (Bendlabs 1-axis flex sensor) like o
 
 Also, plug Arduino into your laptop via USB cable. Open Arduino IDE and make a new sketch with the code provided in this git repo. Compile it and flash it to your Arduino. The code simply reads data from sensor using I2C protocol, and publishes serial data in JSON format.
 
-Now start the python script that makes new ROS node and publishes /flex_sensor_data topic:
+Now start the python script that makes new ROS node. This script reads serial data from arduino, parses JSON data and publishes /flex_sensor_data topic:
 ```
 $ rosrun flex_sensor_node.py
 ```
