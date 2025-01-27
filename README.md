@@ -5,6 +5,15 @@ ROS package for reading and publishing data from flex sensors connected to Ardui
 Flex sensor response when gripping small cilinder (lighter grip):
 ![Flex Sensor Setup](sensor_data/images/cilinder0.png)
 
+Flex sensor response when gripping small cilinder (harder grip):
+![Flex Sensor Setup](sensor_data/images/cilinder6.png)
+
+Flex sensor response when no item was gripped (light grip):
+![Flex Sensor Setup](sensor_data/images/itemless0.png)
+
+Flex sensor response when no item was gripped (harder grip):
+![Flex Sensor Setup](sensor_data/images/itemless9.png)
+
 ## Hardware Requirements
 - Arduino board
 - Flex sensors
