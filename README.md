@@ -12,7 +12,7 @@ Flex sensor response when no item was gripped (light grip):
 ![Flex Sensor Setup](sensor_data/images/itemless0.png)
 
 Flex sensor response when no item was gripped (harder grip):
-![Flex Sensor Setup](sensor_data/images/itemless9.png)
+![Flex Sensor Setup](sensor_data/images/itemless_9.png)
 
 ## Hardware Requirements
 - Arduino board
