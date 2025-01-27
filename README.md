@@ -54,7 +54,8 @@ Requirements:
 - Flex sensor
 
 Connect your Arduino board with flex sensor (Bendlabs 1-axis flex sensor) like on this schema:
-<img src="shema.png" width="200" height="100">
+<\br>
+<img src="shema.png" width="600">
 
 Also, plug Arduino into your laptop via USB cable. Open Arduino IDE and make a new sketch with the code provided in this git repo. Compile it and flash it to your Arduino.
 
