@@ -42,7 +42,7 @@ source devel/setup.bash
 Now you have all the software needed locally on your laptop. 
 Try connecting dynamixel to power source and your laptop and run:
 ```
-$ roslaunch robosoft sofia.launch
+$ roslaunch sofia.launch
 ```
 This should connect dynamixels and start publishing dynamixel_workbench topics. You can list them with ```$ rostopic list```.
 
@@ -57,7 +57,20 @@ Connect your Arduino board with flex sensor (Bendlabs 1-axis flex sensor) like o
 
 <img src="shema.png" width="600">
 
-Also, plug Arduino into your laptop via USB cable. Open Arduino IDE and make a new sketch with the code provided in this git repo. Compile it and flash it to your Arduino.
+Also, plug Arduino into your laptop via USB cable. Open Arduino IDE and make a new sketch with the code provided in this git repo. Compile it and flash it to your Arduino. The code simply reads data from sensor using I2C protocol, and publishes serial data in JSON format.
+
+Now start the python script that makes new ROS node and publishes /flex_sensor_data topic:
+```
+$ rosrun flex_sensor_node.py
+```
+If errors including ```serial port``` not being detected occurs, check read/write permissions for your ```/dev/tty*```, all USB connected devices usually show up in that folder. Find your Arduino USB and dynamixel USB and give them permissions.
+
+After everything is set up and running. You can move gripper with dynamixel through rqt GUI (or you can move it by yourself), start recording rosbag with:
+```
+$ rosbag record -O output_bag.bag /dynamixel_workbench/dynamixel_state /flex_sensor_data
+```
+
+Which will record two relevant topics.
 
 
 Flex sensor response when gripping small cilinder (lighter grip):
