@@ -72,7 +72,10 @@ $ rosbag record -O output_bag.bag /dynamixel_workbench/dynamixel_state /flex_sen
 
 Which will record two relevant topics.
 
-After recording the data you were interested in, you can plot it with python script in ```sensor_data``` folder. In this project, I was comparing flex sensor bending while gripping a cilindrical object with different forces, and also, bending with empty gripper, no item. The goal was to find relation between sensor bending and gripping force and also find the minimum gripping force needed for lifting the object of an unknown softness.
+After recording the data you were interested in, you can plot it with python script in ```sensor_data``` folder. This is how you run the plotting for any bag:
+```$ python3 rosbag_plotter.py my_data.bag```
+
+In this project, I was comparing flex sensor bending while gripping a cilindrical object with different forces, and also, bending with empty gripper, no item. The goal was to find relation between sensor bending and gripping force and also find the minimum gripping force needed for lifting the object of an unknown softness.
 
 ## The recorded data
 
@@ -88,16 +91,4 @@ Flex sensor response when no item was gripped (light grip, ```itemless0.bag```):
 Flex sensor response when no item was gripped (harder grip, ```itemless9.bag```):
 ![Flex Sensor Setup](sensor_data/images/itemless_9.png)
 
-
-## Installation
-```bash
-cd ~/catkin_ws/src
-git clone https://github.com/leeticija/flex_sensor_arduino_ros_package.git
-cd ~/catkin_ws
-catkin_make
-```
-## Runnig
-```bash
-roslaunch robosoft sofia.launch
-rosrun robosoft flex_sensor_node.py
-```
+We can see that the sensor data always oscillates up and down, but we can also see that these oscillations shift with light and soft grip differently.
