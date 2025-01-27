@@ -72,17 +72,20 @@ $ rosbag record -O output_bag.bag /dynamixel_workbench/dynamixel_state /flex_sen
 
 Which will record two relevant topics.
 
+After recording the data you were interested in, you can plot it with python script in ```sensor_data``` folder. In this project, I was comparing flex sensor bending while gripping a cilindrical object with different forces, and also, bending with empty gripper, no item. The goal was to find relation between sensor bending and gripping force and also find the minimum gripping force needed for lifting the object of an unknown softness.
 
-Flex sensor response when gripping small cilinder (lighter grip):
+## The recorded data
+
+In the first sample, I introduced the gripping of a small cilinder with the light grip. Concrete recorded data can be inspected in ```/sensor_data/my_data.bag```:
 ![Flex Sensor Setup](sensor_data/images/cilinder0.png)
 
-Flex sensor response when gripping small cilinder (harder grip):
+Flex sensor response when gripping small cilinder (more force, ```my_data6.bag```):
 ![Flex Sensor Setup](sensor_data/images/cilinder6.png)
 
-Flex sensor response when no item was gripped (light grip):
+Flex sensor response when no item was gripped (light grip, ```itemless0.bag```):
 ![Flex Sensor Setup](sensor_data/images/itemless0.png)
 
-Flex sensor response when no item was gripped (harder grip):
+Flex sensor response when no item was gripped (harder grip, ```itemless9.bag```):
 ![Flex Sensor Setup](sensor_data/images/itemless_9.png)
 
 
